@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Host dashboard — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container">
+      <div class="page-header">
+        <div><h1>Host dashboard</h1><p>Create initiatives, manage volunteers, and track payments and attendance.</p></div>
+        <a href="/initiative-form.html" class="btn btn-primary">+ Create initiative</a>
+      </div>
+      <div id="stats" class="mb-3"></div>
+      <div class="card">
+        <div class="card-header" style="padding-bottom:0;border-bottom:0">
+          <div class="tabs w-full mb-0" role="tablist" aria-label="Initiatives" id="tabs">
+            <button class="tab" role="tab" data-tab="all" aria-selected="true">All</button>
+            <button class="tab" role="tab" data-tab="draft">Drafts</button>
+            <button class="tab" role="tab" data-tab="upcoming">Upcoming</button>
+            <button class="tab" role="tab" data-tab="ongoing">Ongoing</button>
+            <button class="tab" role="tab" data-tab="completed">Completed</button>
+            <button class="tab" role="tab" data-tab="cancelled">Cancelled</button>
+          </div>
+        </div>
+        <div id="list"></div>
+      </div>
+      <div id="pager"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/host.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organizations — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container">
+      <div class="page-header"><div><h1>Organizations</h1><p>Healthcare groups, student organizations, and community groups on GoodNeighbor. Joining one is optional — anyone can host independently.</p></div><button class="btn btn-primary" id="create-btn">+ Create organization</button></div>
+      <form class="card filters mb-3" id="filters" role="search" style="grid-template-columns:2fr 1fr">
+        <div class="field"><label for="q">Search</label><input class="input" id="q" name="q" type="search" maxlength="100" placeholder="Organization name"></div>
+        <div class="field"><label for="type">Type</label><select class="select" id="type" name="type"><option value="">All types</option></select></div>
+      </form>
+      <div id="list"></div>
+      <div id="pager"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/organizations.js"></script>
+</body>
+</html>

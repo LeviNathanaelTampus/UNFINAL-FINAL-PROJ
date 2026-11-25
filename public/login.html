@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="auth-wrap">
+    <div class="card auth-card"><div class="card-body">
+      <h1>Welcome back</h1>
+      <p class="sub">Log in to volunteer, host, and track your initiatives.</p>
+      <div id="notice"></div>
+      <form id="login-form" class="stack" novalidate>
+        <div class="field"><label for="email">Email address</label><input class="input" id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="password">Password</label><input class="input" id="password" name="password" type="password" autocomplete="current-password" required></div>
+        <button class="btn btn-primary btn-block btn-lg" type="submit">Log in</button>
+      </form>
+      <p class="text-center mt-3 mb-0 text-sm">New to GoodNeighbor? <a href="/register.html">Create an account</a></p>
+    </div></div>
+  </main>
+  <script type="module" src="/js/pages/auth.js"></script>
+</body>
+</html>

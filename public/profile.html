@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container">
+      <div class="page-header"><div><h1>My profile</h1><p>Your profile helps hosts get to know their volunteers.</p></div><a class="btn btn-secondary" id="public-link" href="#">View public profile</a></div>
+      <div class="layout-sidebar">
+        <div class="stack">
+          <form class="card" id="profile-form" novalidate><div class="card-header"><h2>Personal information</h2></div><div class="card-body">
+            <div class="row mb-3" style="gap:18px"><div id="avatar-box"></div><div class="stack-sm"><button type="button" class="btn btn-secondary btn-sm" id="avatar-btn">Change photo</button><button type="button" class="btn btn-ghost btn-sm" id="avatar-remove" hidden>Remove photo</button><span class="hint">JPG, PNG or WEBP up to 5 MB</span></div><input type="file" id="avatar-input" accept="image/jpeg,image/png,image/webp" hidden></div>
+            <div class="form-grid">
+              <div class="field"><label for="fullName">Full name <span class="req">*</span></label><input class="input" id="fullName" name="fullName" maxlength="100"></div>
+              <div class="field"><label for="email">Email</label><input class="input" id="email" disabled><span class="hint">Your email is only shown to hosts of initiatives you register for.</span></div>
+              <div class="field"><label for="phone">Contact number</label><input class="input" id="phone" name="phone" maxlength="30" inputmode="tel" placeholder="09XXXXXXXXX"><span class="hint">Shared only with hosts of initiatives you join.</span></div>
+              <div class="field"><label for="city">City / municipality</label><input class="input" id="city" name="city" maxlength="100"></div>
+              <div class="field span-2"><label for="bio">Short bio</label><textarea class="textarea" id="bio" name="bio" maxlength="1000" rows="3" placeholder="A few sentences about you."></textarea></div>
+              <div class="field"><label for="interests">Interests</label><input class="input" id="interests" name="interests" placeholder="Comma separated, e.g. Blood donation, Health education"></div>
+              <div class="field"><label for="skills">Skills</label><input class="input" id="skills" name="skills" placeholder="Comma separated, e.g. First aid, BP monitoring, Filipino sign language"></div>
+              <div class="field span-2"><label for="experience">Volunteer experience</label><textarea class="textarea" id="experience" name="experience" maxlength="2000" rows="3"></textarea></div>
+              <div class="field span-2"><label class="check"><input type="checkbox" id="emailNotifications" name="emailNotifications"> Send me email notifications for important updates (approvals, payments, cancellations)</label></div>
+            </div>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Save profile</button></div>
+          </div></form>
+
+          <div class="card" id="verification"><div class="card-header"><h2>Medical professional verification</h2><span id="ver-badge"></span></div><div class="card-body" id="ver-body"></div></div>
+
+          <form class="card" id="pw-form" novalidate><div class="card-header"><h2>Change password</h2></div><div class="card-body">
+            <div class="form-grid">
+              <div class="field span-2"><label for="currentPassword">Current password</label><input class="input" type="password" id="currentPassword" name="currentPassword" autocomplete="current-password"></div>
+              <div class="field"><label for="newPassword">New password</label><input class="input" type="password" id="newPassword" name="newPassword" autocomplete="new-password"><span class="hint">8+ characters with letters and numbers. You'll be logged out on other devices.</span></div>
+              <div class="field"><label for="confirmPassword">Confirm new password</label><input class="input" type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password"></div>
+            </div>
+            <div class="form-actions"><button class="btn btn-secondary" type="submit">Update password</button></div>
+          </div></form>
+        </div>
+        <aside class="stack sticky">
+          <div class="card"><div class="card-body text-center" id="side-card"></div></div>
+          <div class="card"><div class="card-header"><h3>My organizations</h3><a href="/organizations.html" class="text-sm">Browse</a></div><div id="orgs"></div></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/profile.js"></script>
+</body>
+</html>

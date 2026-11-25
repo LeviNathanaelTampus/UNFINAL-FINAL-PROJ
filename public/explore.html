@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore initiatives — GoodNeighbor Health</title>
+  <meta name="theme-color" content="#0a7c8c">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container">
+      <div class="page-header">
+        <div><h1>Explore</h1><p>Healthcare activities that need volunteers across Northern Mindanao.</p></div>
+        <div class="view-toggle" role="group" aria-label="View">
+          <button type="button" id="view-list" aria-pressed="true"></button>
+          <button type="button" id="view-map" aria-pressed="false"></button>
+        </div>
+      </div>
+
+      <form id="filters" role="search" class="mb-3">
+        <div class="explore-bar">
+          <div class="search-input"><span id="q-icon"></span><label for="q" class="sr-only">Search</label><input class="input" id="q" name="q" type="search" placeholder="Search by title, place, or keyword" maxlength="100"></div>
+          <div class="loc-input"><label for="location" class="sr-only">Location</label><input class="input" id="location" name="location" placeholder="City or province" maxlength="100"></div>
+          <button type="button" class="btn btn-secondary" id="near-btn"></button>
+          <button type="button" class="btn btn-secondary" id="more-btn" aria-expanded="false" aria-controls="more-filters"></button>
+        </div>
+
+        <div class="pill-row mt-2" id="cat-pills" role="group" aria-label="Category"></div>
+        <select id="category" name="category" hidden aria-hidden="true" tabindex="-1"><option value="">All categories</option></select>
+
+        <div class="card more-filters" id="more-filters" hidden>
+          <div class="field"><label for="price">Cost</label><select class="select" id="price" name="price"><option value="">Free &amp; paid</option><option value="free">Free only</option><option value="paid">Paid only</option></select></div>
+          <div class="field"><label for="availability">Availability</label><select class="select" id="availability" name="availability"><option value="">All upcoming</option><option value="open">Open slots only</option></select></div>
+          <div class="field"><label for="from">From</label><input class="input" id="from" name="from" type="date"></div>
+          <div class="field"><label for="to">To</label><input class="input" id="to" name="to" type="date"></div>
+          <div class="field"><label for="sort">Sort by</label><select class="select" id="sort" name="sort"><option value="soonest">Happening soonest</option><option value="newest">Newly published</option></select></div>
+          <div class="field"><button type="reset" class="btn btn-ghost" id="reset-btn">Clear all filters</button></div>
+        </div>
+      </form>
+
+      <div class="row-between mb-2"><span id="result-count" class="muted" aria-live="polite"></span><span id="near-label"></span></div>
+      <div id="list-view"></div>
+      <div id="pager"></div>
+      <div id="map-view" hidden>
+        <div id="map" class="map map-lg"></div>
+        <p class="text-sm muted mt-1" id="map-note"></p>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script type="module" src="/js/pages/explore.js"></script>
+</body>
+</html>

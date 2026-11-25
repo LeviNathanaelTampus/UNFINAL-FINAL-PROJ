@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage participants — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container">
+      <nav class="text-sm mb-2 no-print"><a href="/host.html">← Host dashboard</a></nav>
+      <div id="summary"></div>
+      <div class="tabs no-print" role="tablist" aria-label="Manage" id="tabs">
+        <button class="tab" role="tab" data-tab="participants" aria-controls="panel-participants" aria-selected="true">Participants</button>
+        <button class="tab" role="tab" data-tab="payments" aria-controls="panel-payments" id="tab-payments">Payments</button>
+        <button class="tab" role="tab" data-tab="attendance" aria-controls="panel-attendance">Attendance</button>
+        <button class="tab" role="tab" data-tab="announcements" aria-controls="panel-announcements">Announcements</button>
+      </div>
+      <section id="panel-participants" role="tabpanel"></section>
+      <section id="panel-payments" role="tabpanel" hidden></section>
+      <section id="panel-attendance" role="tabpanel" hidden></section>
+      <section id="panel-announcements" role="tabpanel" hidden></section>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/manage.js"></script>
+</body>
+</html>

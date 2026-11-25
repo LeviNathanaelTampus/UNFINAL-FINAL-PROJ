@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoodNeighbor Health — Healthcare volunteering in Northern Mindanao</title>
+  <meta name="description" content="Discover medical missions, blood drives, and health campaigns in Northern Mindanao. Volunteer or host healthcare initiatives on one platform.">
+  <meta name="theme-color" content="#0a7c8c">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Healthcare volunteering in Northern Mindanao</span>
+          <h1>Find where your <em>care</em> is needed.</h1>
+          <p class="lead">Medical missions, blood drives and health campaigns near you, all in one place. Join one in a tap, or host your own.</p>
+
+          <form class="search-card" id="hero-search" role="search" action="/explore.html">
+            <label class="sc-field"><span class="sr-only">Search initiatives</span><span id="sc-ic-search"></span><input name="q" type="search" placeholder="Blood drive, dental, seminar…" maxlength="100"></label>
+            <label class="sc-field"><span class="sr-only">City or province</span><span id="sc-ic-pin"></span><input name="location" placeholder="City or province" maxlength="100"></label>
+            <button class="btn btn-primary" type="submit" id="sc-submit">Search</button>
+          </form>
+          <div class="suggest" id="suggest"><span class="suggest-label">Popular:</span></div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hv-panel"></div>
+          <div class="hv-card hv-1">
+            <div class="hv-cover i-cover" data-cat="blood_donation" style="margin:0 0 12px;aspect-ratio:auto"><div class="pattern"></div><span class="badge badge-green">Open</span></div>
+            <div class="i-cat">Blood Donation Drive</div>
+            <strong>Bloodletting at Gaisano City Mall</strong>
+            <div class="hv-meta" id="hv-meta-1"></div>
+            <div class="hv-foot"><div class="hv-avatars"><span></span><span></span><span></span></div><span><b style="color:var(--ink)">12</b> of 40 slots left</span></div>
+          </div>
+          <div class="hv-card hv-2">
+            <div class="hv-cover i-cover" data-cat="medical_mission" style="margin:0 0 12px;aspect-ratio:auto"><div class="pattern"></div><span class="badge badge-green">Free</span></div>
+            <div class="i-cat">Medical Mission</div>
+            <strong>Free check-up &amp; dental care, Brgy. Carmen</strong>
+            <div class="hv-meta" id="hv-meta-2"></div>
+          </div>
+          <div class="hv-toast"><span class="icon-circle" id="hv-check"></span><div><b>You're approved!</b><small>See you on Saturday</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Happening soon</h2><p>Open opportunities from hosts across the region.</p></div>
+          <a href="/explore.html" class="btn btn-secondary" id="view-all">View all</a>
+        </div>
+        <div id="featured"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="section-title"><h2>One account. Join or host.</h2><p>No separate organizer sign-up. Volunteer this weekend, run your own drive next month.</p></div>
+        <div class="steps" id="steps"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:16px">
+      <div class="container">
+        <div class="cta-band">
+          <div><h2>Ready to be a <em>good neighbor</em>?</h2><p>Join students, health professionals and community members volunteering near you.</p></div>
+          <div class="row"><a href="/register.html" class="btn btn-white btn-lg" id="cta-primary">Get started</a><a href="/initiative-form.html" class="btn btn-lg btn-ghost-light">Host an initiative</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/landing.js"></script>
+</body>
+</html>

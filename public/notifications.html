@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="container container-sm">
+      <div class="page-header"><div><h1>Notifications</h1><p>Updates about your registrations, payments, and initiatives.</p></div><button class="btn btn-secondary" id="read-all">Mark all as read</button></div>
+      <div class="tabs" role="tablist" id="tabs"><button class="tab" role="tab" data-tab="all" aria-selected="true">All</button><button class="tab" role="tab" data-tab="unread">Unread</button></div>
+      <div class="card"><div id="list"></div></div>
+      <div id="pager"></div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/js/pages/notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account — GoodNeighbor Health</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="auth-wrap">
+    <div class="card auth-card"><div class="card-body">
+      <h1>Create your account</h1>
+      <p class="sub">One account to volunteer <em>and</em> host healthcare initiatives.</p>
+      <div id="notice"></div>
+      <form id="register-form" class="stack" novalidate>
+        <div class="field"><label for="fullName">Full name <span class="req">*</span></label><input class="input" id="fullName" name="fullName" autocomplete="name" maxlength="100" required></div>
+        <div class="field"><label for="email">Email address <span class="req">*</span></label><input class="input" id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+        <div class="field">
+          <label for="password">Password <span class="req">*</span></label>
+          <input class="input" id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required aria-describedby="pw-hint">
+          <div class="pw-meter" aria-hidden="true"><span id="pw-bar"></span></div>
+          <span class="hint" id="pw-hint">At least 8 characters, with letters and numbers.</span>
+        </div>
+        <div class="field"><label for="confirmPassword">Confirm password <span class="req">*</span></label><input class="input" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required></div>
+        <p class="text-xs muted mb-0">By creating an account you agree that your information will be used only to coordinate volunteer activities, in line with the Data Privacy Act of 2012.</p>
+        <button class="btn btn-primary btn-block btn-lg" type="submit">Create account</button>
+      </form>
+      <p class="text-center mt-3 mb-0 text-sm">Already have an account? <a href="/login.html">Log in</a></p>
+    </div></div>
+  </main>
+  <script type="module" src="/js/pages/auth.js"></script>
+</body>
+</html>
